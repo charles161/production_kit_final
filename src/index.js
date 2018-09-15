@@ -3,6 +3,7 @@ import './index.css'
 getUsers().then(result => {
   let usersbody=""
   result.forEach(user => {
+    trackJs.track('ooppppsss!');
     usersbody+=`
     <tr>
     <td><a href="#" data-id="${user.id}" class="deleteUser">Delete</td>
