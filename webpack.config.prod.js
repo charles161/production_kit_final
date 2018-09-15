@@ -42,7 +42,11 @@ export default {
         minifyJS:true,
         minifyURLs:true
       },
-      inject:true
+      inject:true,
+      //properties u define here are availabale in index.html
+      //using htmlWebpackPlugin.options.varName
+      trackJSToken: '50f9242a02dd4e229f02b6c72daa1e02',
+
     }),//create html file that includes eference to bundled javasript
     new webpack.optimize.DedupePlugin(),//eliminate duplicate packages
     new webpack.optimize.UglifyJsPlugin()//minify js

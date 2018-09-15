@@ -2,18 +2,20 @@
 <html>
 
 <head>
-  <script>
-    window._trackJs = {
-      token: "50f9242a02dd4e229f02b6c72daa1e02"
-    };
-  </script>
-  <script src="https://cdn.trackjs.com/releases/current/tracker.js">
+  <% if(htmlWebpackPlugin.options.trackJSToken) { %>
+<script>
+  window._trackJs = {
+    token: '<%=htmlWebpackPlugin.options.trackJSToken%>'
+  };
+</script>
+<script src="https://cdn.trackjs.com/releases/current/tracker.js">
+</script>
+  <%} %>
 
-  </script>
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Page Title</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Charles</title>
+
 </head>
 
 <body>
