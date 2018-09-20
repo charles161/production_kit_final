@@ -17,12 +17,13 @@
     "build": "babel-node buildScripts/build.js",
     "postbuild": "babel-node buildScripts/distServer.js",
     "lint": "esw webpack.config.* src buildScripts --color",
-    "lint:watch": "npm run lint -- --watch"
+    "lint:watch": "npm run lint -- --watch",
+    "deploy": "surge ./dist"
   },
   "author": "charles",
   "license": "MIT",
   "dependencies": {
-    "nodemon": "^1.18.4",
+    "surge": "^0.20.1",
     "whatwg-fetch": "^1.0.0"
   },
   "devDependencies": {
